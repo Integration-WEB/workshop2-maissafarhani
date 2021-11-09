@@ -1,0 +1,98 @@
+$primary-color:#ff752f;
+body {
+color:$primary-color;}
+
+
+
+
+
+
+
+
+
+
+.button{
+    display: inline-block;
+    color:$primary-color;
+    text-align:center;
+    border:solid 2px $primary-color;
+}
+
+
+
+@mixin inline-block($margin :10px){
+display: inline-block;
+margin-left: $margin;}
+
+$primary-color:#ff752f;
+#box{
+     font: {
+         weight:bold;
+         family:Algerian;
+
+     }
+     @include inline-block()
+}
+@for $i from 1 through 3{
+    .m-#{$i}{
+        margin :0 ($i*0.25 rem);
+    }
+}
+
+$primary-color: #ff752f;
+.btn{
+    background:$primary-color;
+    border-radius:5px;
+    @if lightness($primary-color)>50%{
+        color:#ffb60b;
+    }@else{
+        color :#ff1f17;
+    }
+}
+.text {
+    color:red;
+    font-size:20px
+
+}
+textarea,
+   h1 {
+       @extend.text
+   }
+
+   @function background($background-color){
+   @if $back-ground!='white'{
+       @return white;}
+      @else{
+           @return black;
+       }}
+
+$languages:"HTML","CSS","java","react";
+@function test1($list){
+    @return nth($list,1);
+}
+@function test2($list){
+    @return nth($list,length($list));
+}
+.langages{
+    content:test1($languages);
+    content:test2($languages);
+}
+
+
+
+
+
+
+
+
+
+.btn{
+   border: 3px solid yellow}
+
+    
+
+
+
+
+
+
